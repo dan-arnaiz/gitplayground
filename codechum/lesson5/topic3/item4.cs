@@ -1,7 +1,13 @@
 public class Music
 {
-    public int duration { get; set; }
-    public string genre { get; set; }
+    public int duration {
+        get;
+        set;
+    }
+    public string genre {
+        get;
+        set;
+    }
 
     public Music()
     {
@@ -19,16 +25,16 @@ public class Music
     {
         switch (durationType)
         {
-            case 'h': // Hours to minutes
-                this.duration = duration * 60;
-                break;
-            case 'd': // Days to minutes
-                this.duration = duration * 1440;
-                break;
-            case 'm': // Minutes
-            default:
-                this.duration = duration;
-                break;
+        case 'h': // Hours to minutes
+            this.duration = duration * 60;
+            break;
+        case 'd': // Days to minutes
+            this.duration = duration * 1440;
+            break;
+        case 'm': // Minutes
+        default:
+            this.duration = duration;
+            break;
         }
         this.genre = genre;
     }

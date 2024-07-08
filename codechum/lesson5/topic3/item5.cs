@@ -1,7 +1,13 @@
 public class Money
 {
-    public int amount { get; set; }
-    public string denomination { get; set; }
+    public int amount {
+        get;
+        set;
+    }
+    public string denomination {
+        get;
+        set;
+    }
 
     public Money()
     {

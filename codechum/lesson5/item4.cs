@@ -3,9 +3,18 @@ using System.Text.RegularExpressions;
 
 public class Student
 {
-    public int idNumber { get; set; }
-    public string name { get; set; }
-    public string course { get; set; }
+    public int idNumber {
+        get;
+        set;
+    }
+    public string name {
+        get;
+        set;
+    }
+    public string course {
+        get;
+        set;
+    }
 
     public override string ToString()
     {

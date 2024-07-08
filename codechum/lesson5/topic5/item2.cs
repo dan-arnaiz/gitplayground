@@ -51,15 +51,15 @@ public class Car
         string sizeDescriptor = "unknown"; // Default value
         switch (size)
         {
-            case 'S':
-                sizeDescriptor = "small";
-                break;
-            case 'M':
-                sizeDescriptor = "medium";
-                break;
-            case 'L':
-                sizeDescriptor = "large";
-                break;
+        case 'S':
+            sizeDescriptor = "small";
+            break;
+        case 'M':
+            sizeDescriptor = "medium";
+            break;
+        case 'L':
+            sizeDescriptor = "large";
+            break;
         }
         return $"Car ({color}) - P{price:0.00} - {sizeDescriptor}";
     }

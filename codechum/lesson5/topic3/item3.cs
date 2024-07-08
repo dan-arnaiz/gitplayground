@@ -1,7 +1,13 @@
 public class Beverage
 {
-    public string flavor { get; set; }
-    public string color { get; set; }
+    public string flavor {
+        get;
+        set;
+    }
+    public string color {
+        get;
+        set;
+    }
 
     public Beverage()
     {
@@ -18,8 +24,14 @@ public class Beverage
 
 public class Bottle
 {
-    public int mL { get; set; }
-    public Beverage beverage { get; set; }
+    public int mL {
+        get;
+        set;
+    }
+    public Beverage beverage {
+        get;
+        set;
+    }
 
     public Bottle(int mL, Beverage beverage)
     {

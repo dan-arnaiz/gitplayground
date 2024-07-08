@@ -2,8 +2,8 @@ private async void addNewBarangayButton_Click(object sender, EventArgs e)
 {
     // Check for empty required fields and show an error dialog if any are empty
     if (string.IsNullOrWhiteSpace(BarangayNameTextBox.Text) ||
-        string.IsNullOrWhiteSpace(barangayAddressTextBox.Text) ||
-        string.IsNullOrWhiteSpace(barangayDescriptionTextBox.Text))
+            string.IsNullOrWhiteSpace(barangayAddressTextBox.Text) ||
+            string.IsNullOrWhiteSpace(barangayDescriptionTextBox.Text))
     {
         MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         return; // Stop further execution
@@ -36,7 +36,7 @@ private async void addNewBarangayButton_Click(object sender, EventArgs e)
         string BarangayName = BarangayNameTextBox.Text;
         string barangayAddress = barangayAddressTextBox.Text;
         string barangayDescription = barangayDescriptionTextBox.Text;
-        
+
         // Create an instance of your Database class
         Database db = new Database();
         // Call the AddResident method

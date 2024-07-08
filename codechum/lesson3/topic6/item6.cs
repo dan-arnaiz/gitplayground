@@ -16,7 +16,7 @@ public class Program
     {
         Console.Write("Enter n: ");
         int n = Convert.ToInt32(Console.ReadLine());
-        
+
         printCodeChum(n);
     }
 }

@@ -32,8 +32,8 @@ private void uploadBarangayLogoButton_Click(object sender, EventArgs e)
 
         // Construct the filename based on the resident's name or use a default name
         string filename = string.IsNullOrWhiteSpace(lastNameTextBox.Text) || string.IsNullOrWhiteSpace(firstNameTextBox.Text)
-            ? "defaultpicture.jpg" // Use the default picture name if names are empty
-            : $"{lastNameTextBox.Text}_{firstNameTextBox.Text}.jpg";
+                          ? "defaultpicture.jpg" // Use the default picture name if names are empty
+                          : $"{lastNameTextBox.Text}_{firstNameTextBox.Text}.jpg";
         string savePath = Path.Combine(directoryPath, filename);
 
         // Save the resized image

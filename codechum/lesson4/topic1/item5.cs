@@ -3,34 +3,34 @@ using System;
 public class Program
 {
     public static void PrintOdd(int[] array1, int[] array2, int size1, int size2)
+    {
+        bool firstOddPrinted = false;
+        for (int i = 0; i < size1; i++)
         {
-            bool firstOddPrinted = false;
-            for (int i = 0; i < size1; i++)
+            if (array1[i] % 2 != 0)
             {
-                if (array1[i] % 2 != 0)
+                if (firstOddPrinted)
                 {
-                    if (firstOddPrinted)
-                    {
-                        Console.Write(", ");
-                    }
-                    Console.Write(array1[i]);
-                    firstOddPrinted = true;
+                    Console.Write(", ");
                 }
-            }
-
-            for (int j = 0; j < size2; j++)
-            {
-                if (array2[j] % 2 != 0)
-                {
-                    if (firstOddPrinted)
-                    {
-                        Console.Write(", ");
-                    }
-                    Console.Write(array2[j]);
-                    firstOddPrinted = true;
-                }
+                Console.Write(array1[i]);
+                firstOddPrinted = true;
             }
         }
+
+        for (int j = 0; j < size2; j++)
+        {
+            if (array2[j] % 2 != 0)
+            {
+                if (firstOddPrinted)
+                {
+                    Console.Write(", ");
+                }
+                Console.Write(array2[j]);
+                firstOddPrinted = true;
+            }
+        }
+    }
 
     public static void Main(string[] args)
     {

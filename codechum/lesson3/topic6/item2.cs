@@ -10,14 +10,14 @@ public class Program
             printRecursively(current + 1, n); // Corrected to increment current
         }
     }
-    
+
     public static void Main(string[] args)
     {
         int n;
-        
+
         Console.Write("Enter n: ");
         n = Convert.ToInt32(Console.ReadLine());
-        
+
         printRecursively(1, n);
     }
 }

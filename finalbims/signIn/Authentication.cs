@@ -8,41 +8,41 @@ using System.Security.Cryptography;
 
 namespace BIMS_dan
 {
-    internal class Authentication
+internal class Authentication
+{
+    private string connectionString = @"Server=localhost;Database=dan-bims;Integrated Security=True;";
+
+    public bool Login(string username, string password)
     {
-        private string connectionString = @"Server=localhost;Database=dan-bims;Integrated Security=True;";
+        // Hash the password
+        var passwordHash = HashPassword(password);
 
-        public bool Login(string username, string password)
+        using (var connection = new SqlConnection(connectionString))
         {
-            // Hash the password
-            var passwordHash = HashPassword(password);
+            connection.Open();
+            var query = "SELECT COUNT(1) FROM SystemUsers WHERE Username = @Username AND PasswordHash = @PasswordHash AND IsActive = 1";
 
-            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand(query, connection))
             {
-                connection.Open();
-                var query = "SELECT COUNT(1) FROM SystemUsers WHERE Username = @Username AND PasswordHash = @PasswordHash AND IsActive = 1";
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@PasswordHash", passwordHash);
 
-                using (var command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@PasswordHash", passwordHash);
-
-                    var result = (int)command.ExecuteScalar();
-                    return result > 0;
-                }
-            }
-        }
-
-        private string HashPassword(string password)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                var hash = BitConverter.ToString(hashedBytes).Replace("-", "").ToLowerInvariant();
-                return hash;
+                var result = (int)command.ExecuteScalar();
+                return result > 0;
             }
         }
     }
+
+    private string HashPassword(string password)
+    {
+        using (var sha256 = SHA256.Create())
+        {
+            var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+            var hash = BitConverter.ToString(hashedBytes).Replace("-", "").ToLowerInvariant();
+            return hash;
+        }
+    }
+}
 }
 
 

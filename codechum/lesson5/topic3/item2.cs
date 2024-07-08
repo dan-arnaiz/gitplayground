@@ -1,7 +1,13 @@
 public class Bird
 {
-    public string breed { get; set; }
-    public bool isNocturnal { get; set; }
+    public string breed {
+        get;
+        set;
+    }
+    public bool isNocturnal {
+        get;
+        set;
+    }
 
     public Bird()
     {

@@ -24,7 +24,7 @@ public class Program
         int n;
         Console.Write("Enter which nth term: ");
         n = Convert.ToInt32(Console.ReadLine());
-        
+
         Console.Write("Nth term = " + fib(n));
     }
 }

@@ -1,6 +1,6 @@
 public async Task AddResident(byte[] pictureData, string lastName, string firstName, string middleName, DateTime birthdate, string sex, string civilStatus, string address, int yearsResiding, string occupation)
 {
-    string query = @"INSERT INTO residentsTable (picture, lastName, firstName, middleName, birthdate, sex, civilStatus, address, yearsResiding, occupation) 
+    string query = @"INSERT INTO residentsTable (picture, lastName, firstName, middleName, birthdate, sex, civilStatus, address, yearsResiding, occupation)
                  VALUES (@picture, @lastName, @firstName, @middleName, @birthdate, @sex, @civilStatus, @address, @yearsResiding, @occupation)";
 
     using (SqlConnection conn = new SqlConnection(connectionString))

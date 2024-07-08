@@ -2,13 +2,13 @@ private async void addNewResidentButton_Click(object sender, EventArgs e)
 {
     // Check for empty required fields and show an error dialog if any are empty
     if (string.IsNullOrWhiteSpace(lastNameTextBox.Text) ||
-        string.IsNullOrWhiteSpace(firstNameTextBox.Text) ||
-        string.IsNullOrWhiteSpace(middleNameTextBox.Text) ||
-        string.IsNullOrWhiteSpace(addressTextBox.Text) ||
-        sexDropdown.SelectedItem == null ||
-        civilStatusDropdown.SelectedItem == null ||
-        string.IsNullOrWhiteSpace(yearsResidingTextBox.Text) ||
-        string.IsNullOrWhiteSpace(occupationTextBox.Text))
+            string.IsNullOrWhiteSpace(firstNameTextBox.Text) ||
+            string.IsNullOrWhiteSpace(middleNameTextBox.Text) ||
+            string.IsNullOrWhiteSpace(addressTextBox.Text) ||
+            sexDropdown.SelectedItem == null ||
+            civilStatusDropdown.SelectedItem == null ||
+            string.IsNullOrWhiteSpace(yearsResidingTextBox.Text) ||
+            string.IsNullOrWhiteSpace(occupationTextBox.Text))
     {
         MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         return; // Stop further execution

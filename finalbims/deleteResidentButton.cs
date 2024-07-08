@@ -3,8 +3,8 @@ private async void deleteResidentButton_Click(object sender, EventArgs e)
     if (residentsTable.SelectedRows.Count > 0)
     {
         var confirmResult = MessageBox.Show("Are you sure you want to delete this resident?",
-                                             "Confirm Delete",
-                                             MessageBoxButtons.YesNo);
+                                            "Confirm Delete",
+                                            MessageBoxButtons.YesNo);
         if (confirmResult == DialogResult.Yes)
         {
             int idColumnIndex = residentsTable.Columns["idDataGridViewTextBoxColumn"].Index; // Ensure this matches the actual column name in your DataGridView

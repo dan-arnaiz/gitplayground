@@ -1,53 +1,28 @@
 using System;
 
-interface MediaPlayer
-{
-    void PlayAudio();
-    void PlayVideo();
+interface MediaPlayer {
+  void PlayAudio();
+  void PlayVideo();
 }
 
-public class MP3Player : MediaPlayer
-{
-    public void PlayAudio()
-    {
-        Console.WriteLine("MP3Player playing audio.");
-    }
+public class MP3Player : MediaPlayer {
+  public void PlayAudio() { Console.WriteLine("MP3Player playing audio."); }
 
-    public void PlayVideo()
-    {
-        Console.WriteLine("MP3Player cannot play video.");
-    }
+  public void PlayVideo() { Console.WriteLine("MP3Player cannot play video."); }
 }
 
-public class MP4Player : MediaPlayer
-{
-    public void PlayAudio()
-    {
-        Console.WriteLine("MP4Player playing audio.");
-    }
+public class MP4Player : MediaPlayer {
+  public void PlayAudio() { Console.WriteLine("MP4Player playing audio."); }
 
-    public void PlayVideo()
-    {
-        Console.WriteLine("MP4Player playing video.");
-    }
+  public void PlayVideo() { Console.WriteLine("MP4Player playing video."); }
 }
 
-public class Device
-{
-    private MediaPlayer mediaPlayer;
+public class Device {
+  private MediaPlayer mediaPlayer;
 
-    public Device(MediaPlayer mediaPlayer)
-    {
-        this.mediaPlayer = mediaPlayer;
-    }
+  public Device(MediaPlayer mediaPlayer) { this.mediaPlayer = mediaPlayer; }
 
-    public void PlayAudio()
-    {
-        mediaPlayer.PlayAudio();
-    }
+  public void PlayAudio() { mediaPlayer.PlayAudio(); }
 
-    public void PlayVideo()
-    {
-        mediaPlayer.PlayVideo();
-    }
+  public void PlayVideo() { mediaPlayer.PlayVideo(); }
 }

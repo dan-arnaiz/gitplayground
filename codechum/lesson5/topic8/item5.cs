@@ -1,36 +1,21 @@
-public interface VehicleControls
-{
-    void StartEngine();
-    void StopEngine();
-    void TurnOnHeadlights();
-    void TurnOffHeadlights();
-    void Honk();
+public interface VehicleControls {
+  void StartEngine();
+  void StopEngine();
+  void TurnOnHeadlights();
+  void TurnOffHeadlights();
+  void Honk();
 }
 
-public class Car : VehicleControls
-{
-    public void StartEngine()
-    {
-        Console.WriteLine("Engine started.");
-    }
+public class Car : VehicleControls {
+  public void StartEngine() { Console.WriteLine("Engine started."); }
 
-    public void StopEngine()
-    {
-        Console.WriteLine("Engine stopped.");
-    }
+  public void StopEngine() { Console.WriteLine("Engine stopped."); }
 
-    public void TurnOnHeadlights()
-    {
-        Console.WriteLine("Headlights turned on.");
-    }
+  public void TurnOnHeadlights() { Console.WriteLine("Headlights turned on."); }
 
-    public void TurnOffHeadlights()
-    {
-        Console.WriteLine("Headlights turned off.");
-    }
+  public void TurnOffHeadlights() {
+    Console.WriteLine("Headlights turned off.");
+  }
 
-    public void Honk()
-    {
-        Console.WriteLine("Horn sounds.");
-    }
+  public void Honk() { Console.WriteLine("Horn sounds."); }
 }

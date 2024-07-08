@@ -1,34 +1,19 @@
-public class Dog
-{
-    private string breed;
-    private int barkCount = 0;
+public class Dog {
+  private string breed;
+  private int barkCount = 0;
 
-    public string GetBreed()
-    {
-        return breed;
-    }
+  public string GetBreed() { return breed; }
 
-    public void SetBreed(string breed)
-    {
-        this.breed = breed;
-    }
+  public void SetBreed(string breed) { this.breed = breed; }
 
-    public int GetBarkCount()
-    {
-        return barkCount;
-    }
+  public int GetBarkCount() { return barkCount; }
 
-    public bool HasBarkedALot()
-    {
-        return barkCount >= 100;
-    }
+  public bool HasBarkedALot() { return barkCount >= 100; }
 
-    public void Bark(int n)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            Console.WriteLine("Woof");
-        }
-        barkCount += n;
+  public void Bark(int n) {
+    for (int i = 0; i < n; i++) {
+      Console.WriteLine("Woof");
     }
+    barkCount += n;
+  }
 }

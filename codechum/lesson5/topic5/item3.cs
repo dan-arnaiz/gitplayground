@@ -1,36 +1,19 @@
-public class Book
-{
-    private string title;
-    private int numberOfPages;
-    private bool isFictional;
+public class Book {
+  private string title;
+  private int numberOfPages;
+  private bool isFictional;
 
-    public string GetTitle()
-    {
-        return title;
-    }
+  public string GetTitle() { return title; }
 
-    public void SetTitle(string title)
-    {
-        this.title = title;
-    }
+  public void SetTitle(string title) { this.title = title; }
 
-    public int GetNumberOfPages()
-    {
-        return numberOfPages;
-    }
+  public int GetNumberOfPages() { return numberOfPages; }
 
-    public void SetNumberOfPages(int pages)
-    {
-        numberOfPages = pages;
-    }
+  public void SetNumberOfPages(int pages) { numberOfPages = pages; }
 
-    public bool GetIsFictional()
-    {
-        return isFictional;
-    }
+  public bool GetIsFictional() { return isFictional; }
 
-    public void SetIsFictional(bool isFictional)
-    {
-        this.isFictional = isFictional;
-    }
+  public void SetIsFictional(bool isFictional) {
+    this.isFictional = isFictional;
+  }
 }

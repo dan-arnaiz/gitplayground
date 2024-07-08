@@ -1,4 +1,2 @@
-private void residentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-{
-
-}
+private void residentsTable_CellContentClick(object sender,
+                                             DataGridViewCellEventArgs e) {}

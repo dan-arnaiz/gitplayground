@@ -75,7 +75,7 @@ internal class BarangayDB {
   UpdateBarangayAsync(string BarangayID, byte[] BarangayLogo,
                       string barangayName, string address, string description) {
     string query = @"UPDATE Barangays
-                     SET BarangayLogo = @BarangayLogo, BarangayName = @BarangayName, Address = @Address, Description = @Description 
+                     SET BarangayLogo = @BarangayLogo, BarangayName = @BarangayName, Address = @Address, Description = @Description
                      WHERE BarangayID = @BarangayID";
 
     using (SqlConnection conn = new SqlConnection(connectionString)) {
